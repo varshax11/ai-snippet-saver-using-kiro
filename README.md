@@ -1,8 +1,10 @@
 # AI Snippet Saver - Chrome Extension
 
-A Chrome extension that saves selected text from ChatGPT and Gemini directly to Notion with one click.
+A Chrome extension that saves selected text from ChatGPT and Gemini directly to Notion with one click
 
-## 🎯 Problem
+<img width="439" height="263" alt="Screenshot 2025-12-03 at 11 09 35 AM" src="https://github.com/user-attachments/assets/82a1b04f-0517-442f-962b-41e7b21369bc" />
+
+## Problem
 
 When working with AI chatbots like ChatGPT and Gemini, users often need to save specific portions of responses for later reference. The traditional workflow involves:
 1. Manually selecting and copying text
@@ -13,7 +15,7 @@ When working with AI chatbots like ChatGPT and Gemini, users often need to save 
 
 This repetitive process breaks focus and wastes time.
 
-## ✨ Solution
+## Solution
 
 AI Snippet Saver streamlines this workflow into a single action:
 1. Select any text on ChatGPT/Gemini
@@ -21,7 +23,10 @@ AI Snippet Saver streamlines this workflow into a single action:
 3. Enter a title
 4. Done! Text is saved to your Notion page with source link and timestamp
 
-## 🚀 Features
+<img width="811" height="452" alt="Screenshot 2025-12-03 at 11 07 40 AM" src="https://github.com/user-attachments/assets/7c7fffb6-dbe0-4c5a-bd29-176c794bdaa9" />
+<img width="617" height="270" alt="Screenshot 2025-12-03 at 11 08 13 AM" src="https://github.com/user-attachments/assets/01c9a5c4-aacd-4004-a30b-0da27b1ad040" />
+
+## Features
 
 - **One-click saving**: Right-click context menu integration
 - **Direct Notion integration**: Saves to a single Notion page
@@ -29,7 +34,7 @@ AI Snippet Saver streamlines this workflow into a single action:
 - **Smart formatting**: Adds headings, dividers, and proper structure
 - **Works on multiple platforms**: ChatGPT and Gemini support
 
-## 📦 Installation
+## Installation
 
 ### Prerequisites
 - Chrome browser
@@ -68,7 +73,7 @@ AI Snippet Saver streamlines this workflow into a single action:
 5. Enter a title when prompted
 6. Check your Notion page - the snippet is saved!
 
-## 🏗️ Architecture
+## Architecture
 
 ### Files Structure
 
@@ -98,7 +103,7 @@ ai-snippet-saver/
 - Background service worker has full API access
 - This separation keeps the extension secure and functional
 
-## 🔧 Technical Details
+## Technical Details
 
 ### Notion API Integration
 
@@ -128,7 +133,7 @@ fetch(`https://api.notion.com/v1/blocks/${pageId}/children`, {
 - `contextMenus`: Add right-click menu option
 - `host_permissions`: Access Notion API
 
-## 🤖 Built with Kiro
+## Built with Kiro
 
 This project was developed using Kiro, an AI-powered IDE that significantly accelerated development:
 
@@ -149,12 +154,12 @@ This project was developed using Kiro, an AI-powered IDE that significantly acce
 - **Estimated manual time**: 8-10 hours
 - **Time saved**: 75-80%
 
-## 📝 Blog Post
+## Blog Post
 
 For a detailed walkthrough of how this extension was built with Kiro, read the blog post:
-[Building an AI Snippet Saver with Kiro - AWS Builder Center](#)
+[Building an AI Snippet Saver with Kiro - AWS Builder Center](https://builder.aws.com/post/36K3zISL86awNKxoFzj1wtCgwfO_p/ai-snippet-saver-using-kiro)
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Extension not loading
 - Ensure you've enabled Developer mode in `chrome://extensions/`
@@ -171,21 +176,10 @@ For a detailed walkthrough of how this extension was built with Kiro, read the b
 - Verify your page ID is correct (just the ID, not full URL)
 - Test the connection in the setup page
 
-## 📄 License
+## License
 
-MIT License - feel free to use and modify!
+MIT License
 
-## 🙏 Acknowledgments
-
-- Built with [Kiro](https://kiro.ai) - AI-powered development
-- Uses [Notion API](https://developers.notion.com/)
-- Icons designed with emoji
-
-## 🔗 Links
-
-- [GitHub Repository](#)
-- [Blog Post - AWS Builder Center](#)
-- [Notion API Documentation](https://developers.notion.com/)
 
 ---
 
