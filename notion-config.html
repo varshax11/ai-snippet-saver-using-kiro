@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Notion Setup</title>
+  <style>
+    body {
+      width: 450px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    h2 { margin-top: 0; color: #333; }
+    .section { margin-bottom: 20px; }
+    label { display: block; margin-bottom: 5px; font-weight: 600; color: #555; }
+    input { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+    button { background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+    button:hover { background: #45a049; }
+    .status { margin-top: 10px; padding: 10px; border-radius: 4px; display: none; }
+    .status.success { background: #d4edda; color: #155724; display: block; }
+    .status.error { background: #f8d7da; color: #721c24; display: block; }
+    .help { font-size: 12px; color: #666; margin-top: 5px; }
+    .help a { color: #4CAF50; }
+  </style>
+</head>
+<body>
+  <h2>🔗 Connect to Notion</h2>
+  
+  <div class="section">
+    <label>Notion Integration Token</label>
+    <input type="password" id="notion-token" placeholder="secret_...">
+    <div class="help">
+      Get your token: <a href="https://www.notion.so/my-integrations" target="_blank">notion.so/my-integrations</a>
+    </div>
+  </div>
+  
+  <div class="section">
+    <label>Notion Page ID</label>
+    <input type="text" id="page-id" placeholder="2bdac79ec99380afbacbf31d9fb4b951">
+    <div class="help">
+      Copy the page ID from your Notion page URL. Example:<br>
+      <code style="font-size: 11px;">notion.so/Page-Name-<strong>2bdac79ec99380afbacbf31d9fb4b951</strong></code><br>
+      You can paste the full URL or just the ID
+    </div>
+  </div>
+  
+  <button id="save-btn">Save Configuration</button>
+  <button id="test-btn" style="background: #2196F3; margin-left: 8px;">Test Connection</button>
+  
+  <div id="status" class="status"></div>
+  
+  <script src="notion-config.js"></script>
+</body>
+</html>

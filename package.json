@@ -1,0 +1,11 @@
+{
+  "name": "ai-snippet-saver",
+  "version": "1.0.0",
+  "description": "Browser extension to save AI snippets",
+  "scripts": {
+    "resize-icons": "node resize-icons.js"
+  },
+  "devDependencies": {
+    "canvas": "^2.11.2"
+  }
+}

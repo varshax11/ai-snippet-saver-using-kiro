@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI Snippet Saver</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 400px;
+      min-height: 300px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f9f9f9;
+    }
+
+    .header {
+      background: #4CAF50;
+      color: white;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .search-box {
+      padding: 12px;
+      background: white;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .snippets-container {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .snippet-item {
+      background: white;
+      padding: 12px;
+      margin: 8px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .snippet-item:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-1px);
+    }
+
+    .snippet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .snippet-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .snippet-meta {
+      display: flex;
+      gap: 8px;
+      font-size: 11px;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .snippet-source {
+      background: #e3f2fd;
+      color: #1976d2;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .snippet-content {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.4;
+      max-height: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .snippet-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      padding: 4px 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-copy {
+      background: #4CAF50;
+      color: white;
+    }
+
+    .btn-copy:hover {
+      background: #45a049;
+    }
+
+    .btn-delete {
+      background: #f44336;
+      color: white;
+    }
+
+    .btn-delete:hover {
+      background: #da190b;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+    }
+
+    .empty-state p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📝 AI Snippet Saver</h1>
+  </div>
+  
+  <div style="padding: 12px; background: #e3f2fd; border-bottom: 1px solid #90caf9;">
+    <button id="setup-notion-btn" style="width: 100%; padding: 8px; background: #2196F3; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 13px;">
+      ⚙️ Setup Notion Integration
+    </button>
+  </div>
+  
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search snippets...">
+  </div>
+  
+  <div class="snippets-container" id="snippets-list">
+    <div class="empty-state">
+      <p>No snippets saved yet</p>
+      <p style="font-size: 12px; margin-top: 8px;">Click on any AI response in ChatGPT or Gemini to save it</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
